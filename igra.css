@@ -1,0 +1,208 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#polje, #polje_glas_ljudstva, #konec{
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 95%;
+    max-width: 1000px;
+    border: solid transparent;
+    border-radius: 5px;
+    margin: 100px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+}
+
+.cela_vrstica{
+    width: 100%-30px;
+    margin-bottom: 20px;   
+}
+.procent{
+    margin: 0;
+    background-color: #124fa0;
+    color: white;
+    width: 0%;
+    text-align: center;
+    border-radius: 5px;;
+    line-height: 40px;
+    padding-left: 3px; 
+}
+.odg{
+    float: left;
+    line-height: 40px;
+    width: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #11478d;
+}
+
+#glas_ljudstva_izhod, #zakljuci{
+    font-size: 18px;
+    width: 100%;
+    max-width: 200px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+
+#vprasanje, #naslov, #napis{
+    color: #11478d;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#napaka{
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+button, a{
+    font-size: 17px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background: #124fa0;
+    border: solid 2px transparent;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+button:hover, a:hover{
+    background: #165ebd;
+}
+#odgovori, #pomoci, #nadaljuj, #rezultati{
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.odgovor{
+    padding: 12px;
+    margin: 7px 10px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 18px;  
+}
+.crka{
+    font-weight: bold;
+}
+.pomoc{
+    width: 100%;
+    max-width: 150px;
+    margin: 5px;
+}
+#naprej{
+    width: 100%;
+    max-width: 200px;
+}
+
+#sporocilo{
+    color: #11478d;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
+}
+
+#rezultati{
+    margin-bottom: 0;
+}
+.rezultat{
+    padding-top: 5px;
+    text-align: center;
+    margin: 5px;
+    font-size: 19px;
+    width: 40px;
+    height: 35px;
+    border: solid 2px #11478d;
+    border-radius: 5px;
+}
+.koncni_rezultati{
+    text-align: center;
+    font-size: 22px;
+    color: #165ebd;
+    margin-bottom: 15px;
+}
+#pravilnih{
+    color: #4abe4a;
+    font-weight: bold;
+}
+#uspesnost{
+    font-weight: bold;
+}
+a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #polje, #polje_glas_ljudstva, #konec{
+        margin-top: 20px;
+        padding: 15px;
+    }
+     #vprasanje, #naslov, #napis{
+         font-size: 22px;
+         margin-bottom: 10px;
+     }
+     #napaka{
+        font-size: 20px;
+    }
+     #odgovori, #pomoci, #nadaljuj, #rezultati, #sporocilo{
+        margin-bottom: 10px;
+    }
+    .odgovor{
+        padding: 10px;
+        margin: 5px;
+        font-size: 17px;
+        max-width: 300px; 
+    }
+    .pomoc{
+        font-size: 16px;
+        max-width: 120px;
+    }
+    #naprej{
+        font-size: 16px;
+        max-width: 150px;
+    }
+    #sporocilo{
+        font-size: 17px;
+    }
+    .rezultat{
+        width: 32px;
+        height: 30px;
+        padding-top: 4px;
+        font-size: 17px;   
+    }
+    button, a{
+        padding: 7px;
+    }
+    .odgovor{
+        padding: 9px;
+    }
+
+    .procent{
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .odg{
+        line-height: 30px;
+        font-size: 18px;
+    }
+    #glas_ljudstva_izhod, #zakljuci{
+        max-width: 130px;
+        font-size: 16px;
+    }
+    .cela_vrstica{
+        margin-bottom: 10px;   
+    }
+    .koncni_rezultati{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
