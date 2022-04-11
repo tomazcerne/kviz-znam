@@ -118,7 +118,7 @@
                             <div> ' . $pn["D"] . ' <span class="crka">D</span> ' . $odgovori["D"] . ' </div>
                         </div>
                         <div class="moznosti">
-                            <a href="statistika.php?id_vprasanja=' . $id_vprasanja . $izbrisi . '"><i class="fas fa-poll-h"></i> statistika</a>
+                            <a href="statistika.php?id_vprasanja=' . $id_vprasanja . '"><i class="fas fa-poll-h"></i> statistika</a>
                             <a href="izbrisi_vprasanje.php?id_vprasanja=' . $id_vprasanja . $izbrisi . '"><i class="fas fa-trash-alt"></i> izbriši</a> 
                         </div>
                     </div> ';
