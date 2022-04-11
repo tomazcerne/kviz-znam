@@ -21,7 +21,7 @@
 
     function preveri($input, $vnos){
         if(empty($vnos)){
-            $_SESSION["reg_napake"][$input] = "Obvezno izpolnite to polje";
+            $_SESSION["pr_napake"][$input] = "Obvezno izpolnite to polje";
         }
     }
 
