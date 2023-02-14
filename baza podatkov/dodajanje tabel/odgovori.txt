@@ -1,0 +1,10 @@
+CREATE TABLE odgovori(
+id_odgovora int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_uporabnika int NOT NULL,
+id_vprasanja int NOT NULL,
+odgovor char(1) NOT NULL,
+datum_odgovora datetime NOT NULL,
+FOREIGN KEY (id_uporabnika)
+REFERENCES uporabniki(id_uporabnika),
+FOREIGN KEY (id_vprasanja)
+REFERENCES vprasanja(id_vprasanja));

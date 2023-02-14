@@ -1,0 +1,10 @@
+CREATE TABLE kvizi(
+id_kviza int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_uporabnika int NOT NULL,
+naslov_kviza char(50) NOT NULL,
+opis varchar(300),
+geslo_kviza char(32),
+datum_kviza datetime NOT NULL,
+enkrat tinyint(1) NOT NULL,
+FOREIGN KEY (id_uporabnika)
+REFERENCES uporabniki(id_uporabnika));

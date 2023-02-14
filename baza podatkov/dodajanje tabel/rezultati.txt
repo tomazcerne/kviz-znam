@@ -1,0 +1,11 @@
+CREATE TABLE rezultati(
+id_rezultata int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_uporabnika int NOT NULL,
+id_kviza int NOT NULL,
+st_pravilnih int DEFAULT 0,
+st_vprasanj int NOT NULL,
+datum_rezultata datetime NOT NULL,
+FOREIGN KEY (id_uporabnika)
+REFERENCES uporabniki(id_uporabnika),
+FOREIGN KEY (id_kviza)
+REFERENCES kvizi(id_kviza));

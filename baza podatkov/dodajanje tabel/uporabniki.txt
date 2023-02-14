@@ -1,0 +1,7 @@
+CREATE TABLE uporabniki(
+id_uporabnika int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ime char(30) NOT NULL,
+priimek char(30) NOT NULL,
+uporabnisko_ime char(30) NOT NULL,
+geslo char(32) NOT NULL,
+datum_registracije datetime NOT NULL);

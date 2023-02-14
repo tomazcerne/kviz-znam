@@ -1,0 +1,12 @@
+CREATE TABLE vprasanja(
+id_vprasanja int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_kviza int NOT NULL,
+vprasanje char(200) NOT NULL,
+odgovor_A char(50) NOT NULL,
+odgovor_B char(50) NOT NULL,
+odgovor_C char(50) NOT NULL,
+odgovor_D char(50) NOT NULL,
+pravilen char(1) NOT NULL,
+datum_vprasanja datetime NOT NULL,
+FOREIGN KEY (id_kviza)
+REFERENCES kvizi(id_kviza));
