@@ -111,7 +111,7 @@
     </script>   
 </head>
 <body>
-        <form id="ustvari_kviz" action="ustvari.php" method="post" autocomplete="off" onsubmit="return potrditev()">
+        <form id="ustvari_kviz" spellcheck="false" action="ustvari.php" method="post" autocomplete="off" onsubmit="return potrditev()">
             <div id="naslov">
                 Ustvari nov kviz
             </div>

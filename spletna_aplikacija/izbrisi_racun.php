@@ -1,13 +1,13 @@
 <?php
     session_start();
-    if(!isset($_SESSION["id_uporabnika"])){
+    if(!isset($_SESSION["id_uporabnika"]) || $_SESSION["id_uporabnika"] == 1){
         header("Location: ../");
         exit();
     }
    
     if(isset($_GET["izbrisi"])){
         
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         $izbrisi = $baza->prepare("DELETE FROM uporabniki WHERE id_uporabnika = ?");
         $izbrisi->bind_param("i", $_SESSION["id_uporabnika"]);

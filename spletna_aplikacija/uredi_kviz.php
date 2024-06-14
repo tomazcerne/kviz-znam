@@ -5,7 +5,7 @@
         exit();
     }
     else if(isset($_GET["id_kviza"])){
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             header("Location: odjava.php");
@@ -49,7 +49,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="kvizi.css?verzija=7">
-    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         
     </style> 
@@ -58,7 +58,7 @@
        <div id="naslov"><?php echo $naslov_kviza ?></div>
        <div id="vsebina">
             <?php
-                require("../podatki/podatki.php");
+                require("podatki.php");
                 $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
                 if($baza->connect_error){
                     echo "<div id='napaka'> Povezava žal ni bila uspešna </div>";

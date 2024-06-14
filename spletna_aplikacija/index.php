@@ -10,7 +10,7 @@
     $povezava[1] = '<a href="registracija">registracija</a>';
     $napis = "Vpišite se";
     if(isset($_SESSION["id_uporabnika"])){
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             header("Location: odjava.php");
@@ -43,7 +43,7 @@
     <meta name="keywords" content="kviz, znam, kviz znam, igra" >
     <meta name="author" content="Tomaž Černe">
     <link rel="stylesheet" type="text/css" href="naslovnica.css?verzija=9">
-    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
 </head>
 <body>
@@ -104,7 +104,7 @@
     </div>
     <div id="sporocilo">
         <i class="fas fa-exclamation"></i>
-        Spletna stran deluje v polni funkcionalnosti in je trenutno v fazi testiranja. Če odkrijete kakršnekoli težave, sporočite na e-naslov <span style="color: blue">info@kviz-znam.si</span> 
+        dragi obiskovalec, preizkusite se v reševanju in ustvarjanju kvizov.
     </div>
     
 </body>

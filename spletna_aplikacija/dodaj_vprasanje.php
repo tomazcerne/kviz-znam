@@ -5,7 +5,7 @@
         exit();
     }
     else if(isset($_GET["id_kviza"])){
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             header("Location: odjava.php");
@@ -198,7 +198,7 @@
     </script>   
 </head>
 <body>
-        <form id="dodaj_vprasanje" action="<?php echo "dodaj.php?id_kviza=" . $_GET["id_kviza"]; ?>" method="post" autocomplete="off" onsubmit="return potrditev()">
+        <form id="dodaj_vprasanje" spellcheck="false" action="<?php echo "dodaj.php?id_kviza=" . $_GET["id_kviza"]; ?>" method="post" autocomplete="off" onsubmit="return potrditev()">
             <div id="naslov">
                 Dodaj vprašanje
             </div>

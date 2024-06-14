@@ -26,7 +26,7 @@
         if($_POST["geslo_kviza"] == md5("")){
             $geslo = md5("");
         }
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             header("Location: odjava.php");
@@ -119,6 +119,7 @@
 
         $ustvari_rezultat = $baza->prepare("INSERT INTO rezultati(id_kviza, id_uporabnika, st_vprasanj, datum_rezultata) VALUES (?,?,?,?)");
         $v = sizeof($vprasanja);
+        date_default_timezone_set('Europe/Ljubljana');
         $d = date("Y-m-d H:i:s");
         $ustvari_rezultat->bind_param("iiis", $id_kviza, $_SESSION["id_uporabnika"], $v, $d);
         if($ustvari_rezultat->execute()){
@@ -158,7 +159,7 @@
     <title>Igraj</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="igra.css?verzija=12">
     <script type="text/javascript" src="igra.js?verzija=2"></script>
     <style>

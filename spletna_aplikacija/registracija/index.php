@@ -39,7 +39,7 @@
     <title>Registracija</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="pr_reg.css?verzija=5">
+    <link rel="stylesheet" type="text/css" href="pr_reg.css?verzija=6">
     <script type="text/javascript" src="reg.js"></script>
     <script type="text/javascript" src="pr_reg.js"></script>
 </head>
@@ -79,6 +79,10 @@
                     <input type="checkbox" id="pg2" onclick="pokaziGeslo(this)"> 
                     <label for="pg2"> pokaži geslo </label>
                 </div>
+            </div>
+            <div id="alert">
+                Pozor, ne uporabljajte obstoječih gesel drugih aplikacij! 
+                Za morebitno krajo podatkov ne odgovarjamo.
             </div>
             <div id="preusmeritev">
                 Že imaš svoj račun? <a href="<?php echo $pri_url ?>"> Prijavi se </a>

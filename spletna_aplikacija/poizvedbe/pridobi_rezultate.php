@@ -3,7 +3,7 @@
 
         $st = array("A"=>0,"B"=>0,"C"=>0,"D"=>0);
 
-        require("../../podatki/podatki.php");
+        require("../podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             header("Location: ../odjava.php");

@@ -30,7 +30,7 @@
     }
 
     if(!isset($_SESSION["ust_napake"])){
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             $_SESSION["ust_napake"]["splosna"] = "Povezava žal ni bila uspešna. ";
@@ -46,6 +46,7 @@
                         $e = 1;
                     }
                     $g = md5($podatki["geslo_kviza"]);
+                    date_default_timezone_set('Europe/Ljubljana');
                     $d = date("Y-m-d H:i:s");
                     $dodaj_kviz->bind_param("issssi", $_SESSION["id_uporabnika"], $podatki["naslov_kviza"], $podatki["opis"], $g, $d, $e);
                     if(!$dodaj_kviz->execute()){

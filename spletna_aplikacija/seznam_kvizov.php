@@ -1,6 +1,6 @@
 <?php
 
-    require("../podatki/podatki.php");
+    require("podatki.php");
     $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
     if($baza->connect_error){
         echo "<div id='napaka'> Povezava žal ni bila uspešna </div>";

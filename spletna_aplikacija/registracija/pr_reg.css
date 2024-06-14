@@ -58,8 +58,14 @@ input[type=checkbox], label{
     color: red;    
 }
 
-#preusmeritev{
+#preusmeritev, #gost, #alert{
     margin: 25px 5px 0px 5px;
+}
+#gost {
+    color: darkgreen;
+}
+#alert {
+    color: red;
 }
 #preusmeritev a{
     color: rgb(0, 0, 170);

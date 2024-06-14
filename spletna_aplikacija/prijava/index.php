@@ -44,7 +44,7 @@
     <title>Prijava</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../registracija/pr_reg.css?verzija=5">
+    <link rel="stylesheet" type="text/css" href="../registracija/pr_reg.css?verzija=6">
     <script type="text/javascript" src="pr.js"></script>
     <script type="text/javascript" src="../registracija/pr_reg.js"></script>
 </head>
@@ -72,6 +72,9 @@
             <div id="ostani">
                 <input type="checkbox" id="ostani_prijavljen" name="ostani_prijavljen" value="true">
                 <label for="ostani_prijavljen"> ostani prijavljen</label>
+            </div>
+            <div id="gost">
+                Prijaviš se lahko kot gost z uporabniškim imenom gost in geslom gost.
             </div>
             <div id="preusmeritev">
                 Še nimaš svojega računa? <a href="<?php echo $reg_url ?>"> Registriraj se </a>

@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION["id_uporabnika"]) && isset($_POST["id_vprasanja"]) && isset($_POST["id_rezultata"]) && isset($_POST["izbira"]) && isset($_POST["pravilno"])){
-        require("../../podatki/podatki.php");
+        require("../podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             header("Location: ../odjava.php");
@@ -9,6 +9,7 @@
         }
         else{
             $zabelezi = $baza->prepare("INSERT INTO odgovori(id_uporabnika, id_vprasanja, odgovor, datum_odgovora) VALUES (?,?,?,?)");
+            date_default_timezone_set('Europe/Ljubljana');
             $d = date("Y-m-d H:i:s");
             $zabelezi->bind_param("iiss", $_SESSION["id_uporabnika"], $_POST["id_vprasanja"], $_POST["izbira"], $d);
             $zabelezi->execute();

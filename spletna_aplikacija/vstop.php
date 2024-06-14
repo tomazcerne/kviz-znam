@@ -19,7 +19,7 @@
         header("Location: prijava?nazaj=true");
         exit();
     }
-    require("../podatki/podatki.php");
+    require("podatki.php");
     $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
      if($baza->connect_error){
         header("Location: odjava.php");

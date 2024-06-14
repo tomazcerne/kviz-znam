@@ -5,7 +5,7 @@
         exit();
     }
     else if(isset($_GET["id_kviza"])){
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         if($baza->connect_error){
             header("Location: odjava.php");
@@ -47,7 +47,7 @@
     }
     if(isset($_GET["izbrisi"])){
         
-        require("../podatki/podatki.php");
+        require("podatki.php");
         $baza = new mysqli($p[0], $p[1], $p[2], $p[3]);
         $izbrisi = $baza->prepare("DELETE FROM kvizi WHERE id_kviza = ?");
         $izbrisi->bind_param("i", $_GET["id_kviza"]);

@@ -1,0 +1,4 @@
+<Files "podatki.php">
+    Order Allow,Deny
+    Deny from All
+</Files>
